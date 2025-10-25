@@ -3,29 +3,17 @@ import turtle
 wn = turtle.Screen()
 maze_turtle = turtle.Turtle()
 
-# Function to draw a barrier line
-def draw_barrier(t, length=20):
-    t.right(90)
-    t.forward(length)
-    t.backward(length)
-    t.left(90)
+num_walls = 25
+path_width = 10
+pen_color = "black"
 
-for i in range(26):
-    maze_turtle.forward(10)
-    maze_turtle.penup()
-    maze_turtle.forward(i * 10)
-    maze_turtle.pendown()
+maze_turtle.pencolor(pen_color)
+length = path_width  # define it before loop
+maze_turtle.left(90)
+for i in range(num_walls):
+    maze_turtle.forward(length)
     maze_turtle.left(90)
-
-    # Draw a barrier line approximately 40 pixels past the door
-    if i > 4:
-        maze_turtle.penup()
-        maze_turtle.forward(40)
-        maze_turtle.pendown()
-        draw_barrier(maze_turtle)
-        maze_turtle.penup()
-        maze_turtle.backward(40)
-        maze_turtle.pendown()
-
+    length += path_width
 
 wn.mainloop()
+# python3 -m py_compile /Users/evanpaul/VSCodeProjects/1.2.4_Turtle_Escape/a124_maze_spiral.py
