@@ -131,3 +131,8 @@ wn.listen()
 
 update_hud("Press R to start. Use arrows + G to move")
 wn.mainloop()
+
+#Conclusion Questions 
+
+'''1) Pseudocode was useful to visualize and figure out how to structure the functions before coding them. It helped me break down the problem into smaller parts and made the coding process smoother.'''
+'''2) The draw_door function works by moving the turtle forward a specified distance, then lifting the pen to create a gap (the door) before continuing forward. The draw_barrier function creates a barrier by moving forward, turning left to draw a perpendicular line, and then returning to the original direction. Both functions work together in the maze drawing loop to create openings and barriers in the maze.'''
